@@ -5,7 +5,6 @@ sudo apt install qemu-system-x86 -y
 qemu-img create -f raw 8.img 1T
 wget -O RTL8139F.iso 'https://drive.google.com/uc?export=download&id=1wDL8vo9mmYKw1HKXZzaYHoKmzSt_wXai'
 wget -O 8.iso 'https://software.download.prss.microsoft.com/dbazure/Windows_InsiderPreview_Server_vNext_en-us_25120.iso?t=d9be9bb0-616d-4441-84bd-5f2d8af8d6d1&e=1654222742&h=bacf90f39a491298b320bb5ee7287027c8e13501613df25f93c7d319db9e83b6'
-
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 sudo qemu-system-x86_64 \
   -m 8G \
